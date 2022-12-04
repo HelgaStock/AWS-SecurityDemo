@@ -1,10 +1,10 @@
 # route table
 resource "aws_route_table" "demo-rt" {
-  vpc_id = aws_vpc.demovpc.id
+  vpc_id = aws_vpc.demo-vpc.id
 
 # route 1
   route {
-    cidr_block = "10.0.0.0/16"
+    cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.demo-igw.id
   }
 

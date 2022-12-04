@@ -1,7 +1,7 @@
 resource "aws_security_group" "allow_http_lb" {
   name        = "allow_http_lb"
   description = "Allow http"
-  vpc_id      = aws_vpc.myvpc.id
+  vpc_id      = aws_vpc.demo-vpc.id
 
   ingress {
     description = "Http"

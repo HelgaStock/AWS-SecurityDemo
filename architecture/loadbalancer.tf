@@ -8,18 +8,18 @@ resource "aws_lb" "security_demo_lb" {
 
 }
 
-resource "aws_lb_listener" "webserver_listener" {
+resource "aws_lb_listener" "demo_listener" {
   load_balancer_arn = aws_lb.security_demo_lb.arn
   port              = "80"
   protocol          = "HTTP"
   default_action {
     type             = "forward"
-    target_group_arn = aws_lb_target_group.webserver_target.arn
+    target_group_arn = aws_lb_target_group.demo_target.arn
   }
 }
 
-resource "aws_lb_target_group" "webserver_target" {
-  name     = "webserver-target"
+resource "aws_lb_target_group" "demo_target" {
+  name     = "demo-target"
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.demo-vpc.id
