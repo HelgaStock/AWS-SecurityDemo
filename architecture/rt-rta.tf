@@ -19,6 +19,6 @@ resource "aws_route_table_association" "a" {
 }
 #route table association 2
 resource "aws_route_table_association" "b" {
-  gateway_id     = aws_internet_gateway.demo-igw.id
+  subnet_id     = aws_subnet.sub-public-2.id
   route_table_id = aws_route_table.demo-rt.id
 }
