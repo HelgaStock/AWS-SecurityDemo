@@ -1,13 +1,13 @@
-resource "aws_s3_bucket" "SD-Cloudtrail-Reports" {
-  bucket = "SD-Cloudtrail-Reports"
+resource "aws_s3_bucket" "sd-cloudtrail-reports" {
+  bucket = "sd-cloudtrail-reports"
 
   tags = {
-    Name        = "SD-Cloudtrail-Reports"
+    Name        = "sd-cloudtrail-reports"
     Environment = "Security"
   }
 }
 
-resource "aws_s3_bucket_acl" "SD-Cloudtrail-Reports" {
-  bucket = aws_s3_bucket.SD-Cloudtrail-Reports.id
+resource "aws_s3_bucket_acl" "sd-cloudtrail-reports" {
+  bucket = aws_s3_bucket.sd-cloudtrail-reports.id
   acl    = "private"
 }
