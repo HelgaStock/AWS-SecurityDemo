@@ -1,5 +1,5 @@
-resource "aws_dynamodb_table" "SD-source-table" {
-  name           = "SD-source-table"
+resource "aws_dynamodb_table" "sd-source-table" {
+  name           = "sd-source-table"
   read_capacity  = 500
   write_capacity = 500
   hash_key       = "System"
@@ -8,7 +8,7 @@ resource "aws_dynamodb_table" "SD-source-table" {
   attribute {
     name = "System"
     type = "S"
-  }
+  } 
 
   attribute {
     name = "Title"
@@ -21,7 +21,7 @@ server_side_encryption {
   }
 
   tags = {
-    Name        = "SD-source-table"
+    Name        = "sd-source-table"
     Environment = "security"
   }
 }
