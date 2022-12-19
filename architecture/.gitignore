@@ -2,5 +2,7 @@
 .terraform*
 .tfstate*
 build
+terraform.tfstate
+terraform.tfstate.backup
 
 

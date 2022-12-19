@@ -1,7 +1,7 @@
 resource "aws_dynamodb_table" "sd-source-table" {
   name           = "sd-source-table"
-  read_capacity  = 500
-  write_capacity = 500
+  read_capacity  = 20
+  write_capacity = 20
   hash_key       = "System"
   range_key      = "Title"
 
