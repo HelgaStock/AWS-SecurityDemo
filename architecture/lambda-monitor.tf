@@ -1,6 +1,6 @@
 resource "aws_lambda_function" "server_monitoring_function" {
   function_name = "server_monitoring_function"
-  filename      = "architecture/build/monitor.zip"
+  filename      = "build/monitor.zip"
   role          = local.iam_role
   handler       = "monitor.handler"
   timeout       = 300
